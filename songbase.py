@@ -81,8 +81,7 @@ def delete_artists(id):
         return render_template('artist-delete.html', artist=artist)
     if request.method == 'POST':
         # get data from the form
-        artist.name = request.form['name']
-        artist.about = request.form['about']
+        db.session.delete(artist)
         db.session.commit()
         return redirect(url_for('show_all_artists'))
 
