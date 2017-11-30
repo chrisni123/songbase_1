@@ -1,14 +1,15 @@
-{% extends "home-base.html"%}
-{% block title %}Home Page{% endblock %}
+{% extends "home-base.html" %}
 {% block head%}
-  {{ super() }}
-{% endblock%}
-{% block page_content%}
-
-  <!-- Page Content -->
-  <div class="container">
-    <h1 class="mt-5"><i class="fa fa-bullhorn" aria-hidden="true"></i> Welcome to SongBase!</h1>
-    <p>This is a sample project for learning Flask.</p>
-  </div>
-
-{% endblock%}
+{{super ()}}
+<style>
+  h1 {
+    color:blue;
+  }
+</style>
+{% endblock %}
+{% block title %}
+Homepage
+{% endblock %}
+{% block page_content %}
+<h1>this is the index page with template </h1>
+{% endblock %}
