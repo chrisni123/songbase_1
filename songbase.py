@@ -49,8 +49,9 @@ def show_all_songs():
 
 @app.route('/artist/add', methods=['GET', 'POST'])
 def add_artists():
+    artists = Artists.query.all()
     if request.method == 'GET':
-        return render_template('artist-add.html')
+        return render_template('artist-add.html', artists=artists)
     if request.method == 'POST':
         # get data from the form
         name = request.form['name']
